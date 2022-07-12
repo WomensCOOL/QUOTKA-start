@@ -181,6 +181,8 @@ const NothingBox = styled.div`
 `;
 
 const NothingAlert = styled.p`
-  font-size: 25px;
+  font-family: 'SCDream';
+  font-weigt: 900;
+  font-size: 20px;
   color: #ff0200;
 `;

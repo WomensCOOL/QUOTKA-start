@@ -2,6 +2,10 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import Profile from 'assests/Profile.png';
 import Uploader from 'components/MyPage/Section/Uploader';
+import MyBoardList from './Section/MyBoardList';
+import MyComment from './Section/MyComment';
+import Favorite from './Section/MyFavorite';
+import Tab from './Section/TabMenu';
 import {
   MyPageBox,
   MyPageTitle,
@@ -34,22 +38,25 @@ function PageList() {
           <div>Follower</div>0<div>Following</div>0
         </MyPagefollow>
         <MyInform>안녕하세요 쿼억하 입니다. 행복하세요 ^^</MyInform>
+        <Tab />
+
         <ul>
           <MyPageList>
             <li>
-              <Link to="/mypage/boardList">내가 쓴 글(게시글 수정)</Link>
+              <p>내가 쓴 게시글</p>
+              <MyBoardList />
             </li>
+          </MyPageList>
+          <MyPageList>
             <li>
-              <Link to="/mypage/myComment">내 쓴 댓글(댓글 수정)</Link>
+              내가 쓴 댓글
+              <MyComment />
             </li>
+          </MyPageList>
+          <MyPageList>
             <li>
-              <Link to="/mypage/comment">내가 댓글 단 글</Link>
-            </li>
-            <li>
-              <Link to="/mypage/reply">내가 대댓글 단 댓글</Link>
-            </li>
-            <li>
-              <Link to="/mypage/favorite">내가 좋아요 누른 글</Link>
+              저장한 게시글
+              <Favorite />
             </li>
           </MyPageList>
         </ul>
