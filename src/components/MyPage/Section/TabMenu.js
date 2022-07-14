@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import MyBoardList from './MyBoardList';
+import MyComment from './MyComment';
+import Favorite from './MyFavorite';
+import { MenuList } from 'styles/mypage/styles';
 
 export default function Orgchart() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -11,34 +15,66 @@ export default function Orgchart() {
     {
       tabTitle: (
         <li
-          className={activeIndex === 0 ? 'is-active' : ''}
+          className={activeIndex === 0 ? 'submenu focused' : 'submenu'}
           onClick={() => tabClickHandler(0)}
         >
           내가 쓴 게시글
         </li>
       ),
-      tabCont: <div>탭1 내용</div>,
+      tabCont: (
+        <div>
+          <MyBoardList />
+        </div>
+      ),
     },
     {
       tabTitle: (
         <li
-          className={activeIndex === 1 ? 'is-active' : ''}
+          className={activeIndex === 1 ? 'submenu focused' : 'submenu'}
           onClick={() => tabClickHandler(1)}
         >
           내가 쓴 댓글
         </li>
       ),
-      tabCont: <div> 탭2 내용</div>,
+      tabCont: (
+        <div>
+          <MyComment />
+        </div>
+      ),
+    },
+    {
+      tabTitle: (
+        <li
+          className={activeIndex === 2 ? 'submenu focused' : 'submenu'}
+          onClick={() => tabClickHandler(2)}
+        >
+          저장한 게시글
+        </li>
+      ),
+      tabCont: (
+        <div>
+          <Favorite />
+        </div>
+      ),
     },
   ];
 
   return (
     <div>
-      <ul className="tabs is-boxed">
-        {tabContArr.map((section, index) => {
-          return section.tabTitle;
-        })}
-      </ul>
+      <hr className="line"></hr>
+      <MenuList>
+        <ul className="menu-box">
+          <div className="element">
+            <li className="menu-list">
+              {tabContArr.map((section, index) => {
+                return section.tabTitle;
+              })}
+            </li>
+          </div>
+        </ul>
+      </MenuList>
+      <hr></hr>
+
       <div>{tabContArr[activeIndex].tabCont}</div>
     </div>
   );

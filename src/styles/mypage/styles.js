@@ -100,5 +100,16 @@ export const MenuList = styled.div`
   .submenu {
     margin-right: 25px;
     cursor: pointer;
+    font-weight: 600;
+  }
+
+  .submenu:hover {
+    font-family: 'SCDream-bold';
+    font-weight: 100;
+  }
+
+  .focused {
+    font-family: 'SCDream-bold';
+    font-weight: 100;
   }
 `;
