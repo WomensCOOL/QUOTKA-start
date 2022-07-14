@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import MainDescription1 from 'assests/Logo.png';
-import MainDescription2 from 'assests/Logo.png';
-import MainDescription3 from 'assests/Logo.png';
+import Banner from 'assests/Logo.png';
+import TrendingBox from '../components/Main/TrendingBox';
 
 const Main = () => {
   return (
     <>
-      <MainTitle>QUOTKA</MainTitle>
       <MainBox>
-        <MainImg src={MainDescription1} />
+        <MainImg src={Banner} /> banner
       </MainBox>
+      <MainTitle>
+        <Img src={Banner} />
+        Trending on QUOTKA
+      </MainTitle>
+      <TrendingBox />
     </>
   );
 };
@@ -18,44 +21,31 @@ const Main = () => {
 export default Main;
 
 const MainTitle = styled.h2`
+  margin: 0 auto;
+  padding-top: 15px;
   font-size: 25px;
-  font-weight: 500;
-  color: gray;
-  width: 1000px;
-  margin-bottom: 20px;
-  margin-left: 200px;
-  text-shadow: 2px 3px 4px gray;
+  font-weight: 900;
 `;
 
 const MainImg = styled.img`
-  width: 600px;
-  height: 600px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  margin-left: 17%;
+  margin-top: 5%;
 `;
-
-const MainImg2 = styled.img`
-  width: 600px;
-  height: 600px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  z-index: 100;
-  position: relative;
-  top: 80px;
-  left: -300px;
+const Img = styled.img`
+  width: 27px;
+  height: 27px;
+  margin-right: 5px;
+  padding-top: 5px;
 `;
-
-const MainImg3 = styled.img`
-  width: 600px;
-  height: 600px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  z-index: 101;
-  position: relative;
-  top: 0px;
-  left: -400px;
-`;
-
 const MainBox = styled.div`
-  display: flex;
+  font-weight: 900;
+  font-size: 150px;
+
+  height: 300px;
+  width: 1080px;
+  background-color: gray;
+  margin-left: -200px;
+  margin-top: -50px;
 `;

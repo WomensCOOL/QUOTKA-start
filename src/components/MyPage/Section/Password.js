@@ -7,6 +7,8 @@ import { PasswordError, PasswordConfirmError } from 'library/options/errors';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import IconButton from '@material-ui/core/IconButton';
+import Uploader from 'components/MyPage/Section/Uploader';
+
 import {
   FormBox,
   FormTitle,
@@ -58,6 +60,8 @@ function Password({ history }) {
 
   return (
     <FormBox onSubmit={handleSubmit(onSubmit)}>
+      <Uploader />
+
       <FormTitle>비밀번호 변경</FormTitle>
       <InputBox>
         <label htmlFor="newPassword">새 비밀번호</label>

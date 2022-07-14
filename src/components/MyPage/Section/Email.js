@@ -84,6 +84,7 @@ function Email({ history }) {
     <FormBox onSubmit={handleSubmit(onSubmit)}>
       <FormTitle>개인정보 수정</FormTitle>
       <Title>이메일 변경</Title>
+
       <InputBox>
         <label htmlFor="oldEmail">현재 이메일</label>
         <FilledInput id="oldEmail" name="oldEmail" value={oldEmail} readOnly />
