@@ -25,4 +25,6 @@ const WrapContainer = styled.main`
   height: auto;
   margin-left: 200px;
   margin-right: 200px;
+
+  font-family: 'SCDream';
 `;
