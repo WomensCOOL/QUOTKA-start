@@ -89,3 +89,16 @@ export const MyPageList = styled.div`
   margin-bottom: 30px;
   background-color: #eee;
 `;
+
+export const MenuList = styled.div`
+  .menu-list {
+    display: flex;
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .submenu {
+    margin-right: 25px;
+    cursor: pointer;
+  }
+`;
