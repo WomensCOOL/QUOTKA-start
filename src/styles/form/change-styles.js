@@ -24,7 +24,7 @@ export const Title = styled.form`
   font-weight: 900;
   display: flex;
   justify-content: left;
-  margin-left: 80px;
+  margin-left: 10px;
   margin-bottom: 12px;
   margin-top: 10px;
   letter-spacing: 1.2px;
@@ -43,7 +43,7 @@ export const InputBox = styled.div`
   width: 100%;
   position: relative;
   display: flex;
-  margin-left: 90px;
+  margin-left: 20px;
   flex-direction: column;
   align-items: start;
   & label {
@@ -58,10 +58,10 @@ export const InputBox = styled.div`
   }
 `;
 
-/**아이디 비밀번호 치는 디자인 */
+/**아이디 비밀번호 치는 디자인width280px이었음. */
 export const FilledInput = styled.input`
   position: relative;
-  width: 280px;
+  width: 380px;
   height: 48px;
   padding: 0 20px;
   border: 1px solid #eee;
@@ -87,7 +87,7 @@ export const PasswordBox = styled.div`
 export const PasswordButton = styled.div`
   position: absolute;
   bottom: 0;
-  left: 215px;
+  left: 300px;
 `;
 
 export const LoginButton = styled.button`
@@ -145,7 +145,7 @@ export const RadioBox = styled.div`
 
 export const RegistButton = styled.button`
   margin: 0 auto;
-  width: 280px;
+  width: 380px;
   height: 50px;
   border: 1px solid #ccc;
   border-radius: 8px;
