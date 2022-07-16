@@ -108,7 +108,7 @@ function Email({ history }) {
   return (
     <FormBox onSubmit={handleSubmit(onSubmit)}>
       <ProfileBox className="left">
-        <Profile />
+        <Profile name={'프로필 수정'} go={'/mypage/password'} />
       </ProfileBox>
       <ContentBox className="right">
         <Title>이메일 변경</Title>
@@ -301,11 +301,7 @@ function Email({ history }) {
             </RegistButton>
           </li>
         </InputBox>
-        <Title>
-          <Link to="/mypage/withdrawal" className="out">
-            회원탈퇴
-          </Link>
-        </Title>
+        <Title>회원탈퇴</Title>
         <InputBox>
           <label htmlFor="password">비밀번호</label>
           <PasswordBox>

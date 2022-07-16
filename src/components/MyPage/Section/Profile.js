@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { withRouter, Link } from 'react-router-dom';
 import Profile from 'assests/Profile.png';
+function LoginButton() {
+  return <button>로그인</button>;
+}
+function LogoutButton() {
+  return <button>로그아웃</button>;
+}
 
-const ProfileLeft = () => {
+const ProfileLeft = props => {
   return (
     <>
       <Box>
@@ -15,7 +21,7 @@ const ProfileLeft = () => {
         </Img>
         <div className="name"> 쿼억카</div>
         <div className="right">
-          <Link to="/mypage/password">프로필 수정</Link>
+          <Link to={props.go}>{props.name}</Link>
         </div>
         <div className="follow">Follower0Following0</div>
         <div className="inform">안녕하세요 쿼카에오 만나서 반가워오</div>

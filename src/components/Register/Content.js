@@ -88,7 +88,7 @@ function RegisterPage(props) {
               required: true,
               minLength: true,
               minLength: 2,
-              maxLength: 4,
+              maxLength: 10,
             })}
           />
           {errors.name && (

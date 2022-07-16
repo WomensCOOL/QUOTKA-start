@@ -8,6 +8,9 @@ export const FormBox = styled.form`
     margin: 0 auto;
   }
 `;
+export const UploaderBox = styled.div`
+  width: 375px;
+`;
 export const ProfileBox = styled.form`
   width: 60%;
   padding: 5%;

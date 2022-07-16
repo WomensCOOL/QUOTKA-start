@@ -9,10 +9,12 @@ export const WITHDRAWAL_USER = 'withdrawal_user';
 export const UPDATE_EMAIL = 'update_email';
 export const UPDATE_PASSWORD = 'update_password';
 export const UPDATE_GITHUB = 'update_github';
+export const UPDATE_NAME = 'update_name';
 
 // USER 정보 가져오기 (이메일, 깃헙주소)
 export const GET_EMAIL = 'get_email';
 export const GET_GITHUB = 'get_github';
+export const GET_NAME = 'get_name';
 
 // USER 댓글, 게시글 조회하기
 export const GET_MYCOMMENT = 'get_myComment';
