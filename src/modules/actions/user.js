@@ -6,8 +6,10 @@ import {
   CHECK_USER,
   WITHDRAWAL_USER,
   UPDATE_EMAIL,
+  UPDATE_NAME,
   UPDATE_PASSWORD,
   GET_EMAIL,
+  GET_NAME,
   GET_MYCOMMENT,
   GET_MYBOARD,
   GET_MYREPLY,
@@ -83,6 +85,18 @@ export function updateEmail(email) {
   };
 }
 
+//이름 변경
+export function updateName(name) {
+  const request = axios
+    .post('/api/user/update/name', name)
+    .then(response => response.data);
+
+  return {
+    type: UPDATE_NAME,
+    payload: request,
+  };
+}
+
 // 비밀번호 변경
 export function updatePassword(user) {
   const request = axios
@@ -103,6 +117,18 @@ export function getEmail(userId) {
 
   return {
     type: GET_EMAIL,
+    payload: request,
+  };
+}
+
+//이름 조회
+export function getName(userName) {
+  const request = axios
+    .post('/api/user/myName', userName)
+    .then(response => response.data);
+
+  return {
+    type: GET_NAME,
     payload: request,
   };
 }

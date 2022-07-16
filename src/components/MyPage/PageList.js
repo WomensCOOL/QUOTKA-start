@@ -34,13 +34,6 @@ function PageList() {
         </MyPagefollow>
         <MyInform>안녕하세요 쿼억하 입니다. 행복하세요 ^^</MyInform>
         <Tab />
-        <ul>
-          <MyPageList>
-            <li>
-              <Link to="/mypage/withdrawal">회원탈퇴</Link>
-            </li>
-          </MyPageList>
-        </ul>
       </MyPageBox>
     </>
   );

@@ -23,7 +23,7 @@ export const PasswordConfirmError = {
 
 // 이름
 export const NameError = {
-  required: '이름을 입력해주세요.',
-  minLength: '이름을 2글자 이상 입력해주세요.',
-  maxLength: '이름을 4글자 이내로 작성해주세요.',
+  required: '닉네임을 입력해주세요.',
+  minLength: '닉네임을 2글자 이상 입력해주세요.',
+  maxLength: '닉네임을 10글자 이내로 작성해주세요.',
 };
