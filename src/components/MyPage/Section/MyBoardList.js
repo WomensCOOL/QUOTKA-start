@@ -75,75 +75,19 @@ function MyBoardList({ history }) {
 
   return (
     <>
-      {show && (
-        <BoardWriteForm onSubmit={onSubmit}>
-          <ul>
-            <li>
-              <BoardInput
-                name="boardTitle"
-                placeholder="제목을 작성해주세요"
-                value={boardTitle}
-                onChange={onChange}
-              />
-            </li>
-            <li>
-              <BoardTextarea
-                name="boardContent"
-                placeholder="내용을 작성해주세요."
-                value={boardContent}
-                onChange={onChange}
-              />
-            </li>
-            <li>
-              <BoardButton type="submit" onClick={onSubmit}>
-                수정
-              </BoardButton>
-            </li>
-          </ul>
-        </BoardWriteForm>
-      )}
-      {MyBoard.length === 0 && (
-        <NothingBox>
-          <NothingAlert>게시글 목록이 없습니다.</NothingAlert>
-        </NothingBox>
-      )}
-      {MyBoard &&
-        MyBoard.map((board, index) => {
-          return (
-            <React.Fragment key={index}>
-              <BoardUl>
-                <AddBoard
-                  href="{`../board/${board._id}`}"
-                  id={board._id}
-                  user={board.userFrom}
-                  time={board.createdAt}
-                  writer={board.boardWriter}
-                  title={board.boardTitle}
-                  content={board.boardContent}
-                  onRemove={onRemove}
-                />
-                <EditButton
-                  onClick={() => {
-                    getBoardId(board._id);
-                    setShow(!show);
-                  }}
-                >
-                  수정
-                </EditButton>
-              </BoardUl>
-            </React.Fragment>
-          );
-        })}
+      <BoardUl>
+        <ul className="boardTitle">
+          <li className="num">번호</li>
+          <li className="date">일자</li>
+          <li className="title">글 제목</li>
+          <li className="content">본문 내용</li>
+        </ul>
+      </BoardUl>
     </>
   );
 }
 
 export default withRouter(MyBoardList);
-
-const BoardWriteForm = styled.form`
-  display: flex;
-  justify-content: center;
-`;
 
 const BoardButton = styled.button`
   border-radius: 8px;
@@ -170,7 +114,27 @@ const EditButton = styled.button`
 `;
 
 const BoardUl = styled.ul`
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .boardTitle {
+    display: float;
+    padding: 7px;
+    font-size: 14px;
+  }
+  .num {
+    margin-right: 10%;
+  }
+  .date {
+    margin-right: 20%;
+  }
+  .title {
+    margin-right: 20%;
+  }
+  .content {
+    margin-right: 20%;
+  }
 `;
 
 const NothingBox = styled.div`
