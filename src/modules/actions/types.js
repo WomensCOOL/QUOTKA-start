@@ -40,6 +40,13 @@ export const SUBTRACTION_LIKE = 'subtraction_like';
 export const ADDITION_LIKE = 'addition_like';
 export const LIKE_LIST = 'list_list';
 
+// Scrap
+export const GET_SCRAP = 'get_scrap';
+export const ISCHECK_SCRAP = 'ischeck_scrap';
+export const SUBTRACTION_SCRAP = 'subtraction_scrap';
+export const ADDITION_SCRAP = 'addition_scrap';
+export const SCRAP_LIST = 'scrap_list';
+
 // Reply
 export const UPLOAD_REPLY = 'upload_reply';
 export const GET_REPLY = 'get_reply';

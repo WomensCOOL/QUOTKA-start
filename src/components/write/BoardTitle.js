@@ -3,23 +3,19 @@ import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 
 const BoardTitleBlock = styled.div`
-
-
- width: 100%;
-border-top: 1px solid ${palette.gray[2]};
-  padding-top: 2rem;
-
-h2 {
-    color: ${palette.gray[8]}
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
+  width: 1000px;
+  padding-top: 0rem;
+  font-family: 'SCDream4R';
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: -25px;
+  margin-bottom: 30px;
 `;
 
 const BoardTitleBox = ({}) => {
   return (
     <BoardTitleBlock>
-      <h2>쿼카마스터</h2>
+      <h3>쿼트마스터</h3>
     </BoardTitleBlock>
   );
 };

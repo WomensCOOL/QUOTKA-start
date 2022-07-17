@@ -7,7 +7,7 @@ import {
   additionLike,
 } from 'modules/actions/like';
 import styled from 'styled-components';
-import LikeIcon from 'assests/Like.png';
+import LikeIcon from 'assests/likee.png';
 
 function LikeButton({ boardId, boardTitle, boardContent, boardWriter }) {
   const dispatch = useDispatch();
