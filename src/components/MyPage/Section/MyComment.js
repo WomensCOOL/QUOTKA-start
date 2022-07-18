@@ -39,6 +39,15 @@ function MyComment() {
 
   return (
     <>
+      <BoardUl>
+        <ul className="boardTitle">
+          <li className="num">번호</li>
+          <li className="date">일자</li>
+          <li className="title">글 제목</li>
+          <li className="content">댓글 내용</li>
+        </ul>
+      </BoardUl>
+      <hr></hr>
       {CommentsFrom.length === 0 && (
         <NothingBox>
           <NothingAlert>댓글 목록이 없습니다.</NothingAlert>
@@ -76,4 +85,30 @@ const NothingBox = styled.div`
 const NothingAlert = styled.p`
   font-size: 25px;
   color: #ff0200;
+`;
+
+const BoardUl = styled.ul`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .boardTitle {
+    display: float;
+    padding: 7px;
+    font-size: 14px;
+    font-family: 'SCDream-bold';
+    font-weight: 100;
+  }
+  .num {
+    margin-right: 10%;
+  }
+  .date {
+    margin-right: 20%;
+  }
+  .title {
+    margin-right: 20%;
+  }
+  .content {
+    margin-right: 20%;
+  }
 `;
