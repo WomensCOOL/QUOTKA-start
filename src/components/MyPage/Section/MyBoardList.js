@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
+import Table from 'react-bootstrap/Table';
+//npm i react-bootstrap bootstrap
 import { useDispatch } from 'react-redux';
 import { getMyBoard } from 'modules/actions/user';
 import { updateBoard } from 'modules/actions/board';
@@ -7,6 +9,8 @@ import AddBoard from 'components/Board/Section/Board/AddBoard';
 import styled from 'styled-components';
 import BoardTextarea from 'components/Board/Section/Board/BoardTextarea';
 import BoardInput from 'components/Board/Section/Board/BoardInput';
+import axios from 'axios';
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from '@loadable/component';
 
 function MyBoardList({ history }) {
   const dispatch = useDispatch();
@@ -83,6 +87,38 @@ function MyBoardList({ history }) {
           <li className="content">본문 내용</li>
         </ul>
       </BoardUl>
+      <hr></hr>
+      <BoardUl striped bordered hover>
+        <thead>
+          <tr className="boardTitle">
+            <th className="num">번호</th>
+            <th className="date">제목</th>
+            <th className="title">작성자</th>
+            <th className="content">작성일</th>
+          </tr>
+        </thead>
+      </BoardUl>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td className="num">게시글1</td>
+          <td>에어니는</td>
+          <td>2022-03-19</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>게시글2</td>
+          <td>게시판이</td>
+          <td>2022-03-19</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>게시글2</td>
+          <td>어려워요</td>
+          <td>2022-03-19</td>
+        </tr>
+      </tbody>
     </>
   );
 }
@@ -113,11 +149,13 @@ const EditButton = styled.button`
   position: absolute;
 `;
 
-const BoardUl = styled.ul`
+const BoardUl = styled.tbody`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'SCDream-bold';
+  font-weight: 100;
   .boardTitle {
     display: float;
     padding: 7px;

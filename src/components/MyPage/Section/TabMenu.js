@@ -53,14 +53,6 @@ export default function Orgchart() {
       ),
       tabCont: (
         <div>
-          <div>
-            <ul>
-              <li className="num">번호</li>
-              <li className="date">일자</li>
-              <li className="title">글 제목</li>
-              <li className="content">본문 내용</li>
-            </ul>
-          </div>
           <MyComment />
         </div>
       ),
