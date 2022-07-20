@@ -8,6 +8,7 @@ import CommentButton from '../Comment/CommentButton';
 import ShowInfo from '../ShowInfo/ShowInfo';
 import Github from 'assests/Github.png';
 import styled from 'styled-components';
+import Profile from 'assests/Profile.png';
 
 function AddBoard(props) {
   const currentUser = window.localStorage.getItem('userId');
@@ -20,41 +21,36 @@ function AddBoard(props) {
     <>
       <AddBoardBox key={props.id}>
         <div>
-          <BoardHeader style={{ display: 'flex' }}>
-            {props.user.field === undefined ? (
-              <OnlyWriter>{props.writer}</OnlyWriter>
-            ) : (
+          <BoardHeader>
+            <Title>{props.title}</Title>
+            <WriterInfo>
+              <div className="profileImg">
+                <ProfileImg src={Profile} />
+              </div>
               <ul>
-                <AddBoardWriter onClick={showHandler}>
-                  <NameBox>
-                    <Writer>{props.writer}</Writer>
-                    <GithubImg
-                      src={Github}
-                      alt="GitHub"
-                      onClick={() =>
-                        window.open(`${props.user.github}`, '_blank')
-                      }
-                    />
-                    <Field>{props.user.field}</Field>
-                  </NameBox>
-                </AddBoardWriter>
-                <InfoBox>
-                  {showInfo && (
-                    <ShowInfo
-                      email={props.user.email}
-                      gender={props.user.gender}
-                      userDescription={props.user.userDescription}
-                    />
+                <li>
+                  {props.user.field === undefined ? (
+                    <OnlyWriter>{props.writer}</OnlyWriter>
+                  ) : (
+                    <AddBoardWriter onClick={showHandler}>
+                      <NameBox>
+                        <Writer>{props.writer}</Writer>
+                        <Field>{props.user.field}</Field>
+                      </NameBox>
+                    </AddBoardWriter>
                   )}
-                </InfoBox>
+                </li>
+                <li>
+                  <div className="timeView">
+                    <TimeBox>
+                      <UpdateTime time={props.time} />
+                    </TimeBox>
+                    <ViewCounts>조회수 {props.viewCounts}</ViewCounts>
+                  </div>
+                </li>
               </ul>
-            )}
+            </WriterInfo>
             <ul>
-              <li>
-                <TimeBox>
-                  <UpdateTime time={props.time} />
-                </TimeBox>
-              </li>
               <li>
                 <DeleteBoardBox>
                   {props.user !== undefined ? (
@@ -83,27 +79,28 @@ function AddBoard(props) {
             </ul>
           </BoardHeader>
         </div>
-        <Link to={`/board/${props.id}`}>
-          <Title>{props.title}</Title>
+        <div>
           <Content>{props.content}</Content>
-        </Link>
-        <div style={{ textAlign: 'right' }}>
-          <LikeButton
-            boardId={props.id}
-            boardWriter={props.writer}
-            boardTitle={props.title}
-            boardContent={props.content}
-          />
-          <ScrapButton
-            boardId={props.id}
-            boardWriter={props.writer}
-            boardTitle={props.title}
-            boardContent={props.content}
-          />
-          <Link to={`/board/${props.id}`}>
-            <CommentButton boardId={props.id} />
-          </Link>
         </div>
+        <ButtonBox>
+          <div style={{ textAlign: 'left' }}>
+            <LikeButton
+              boardId={props.id}
+              boardWriter={props.writer}
+              boardTitle={props.title}
+              boardContent={props.content}
+            />
+            <ScrapButton
+              boardId={props.id}
+              boardWriter={props.writer}
+              boardTitle={props.title}
+              boardContent={props.content}
+            />
+            <Link to={`/board/${props.id}`}>
+              <CommentButton boardId={props.id} />
+            </Link>
+          </div>
+        </ButtonBox>
       </AddBoardBox>
     </>
   );
@@ -111,15 +108,41 @@ function AddBoard(props) {
 
 export default withRouter(AddBoard);
 
-const GithubImg = styled.img`
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
+const BoardHeader = styled.span`
+  width: 100%;
+`;
+
+const WriterInfo = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -5px;
+
+  .profileImg {
+    margin-right: 0px;
+  }
+
+  ul {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+
+  .timeView {
+    display: flex;
+    align-items: left;
+  }
+`;
+
+const Title = styled.div`
+  font-family: 'SCDream4R';
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 0px;
+  margin-bottom: 1px;
 `;
 
 const AddBoardBox = styled.div`
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
 `;
 
@@ -127,35 +150,36 @@ const AddBoardWriter = styled.li`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top; 10px;
 `;
 
 const Writer = styled.span`
   width: 60px;
-  height: 25px;
-  font-size: 14px;
+  height: 20px;
+  font-size: 15px;
   padding-top: 3px;
+  font-family: 'SCDream4R';
   font-weight: 500;
-  color: #fff;
-  background-color: #1a83ff;
-  border-radius: 5px;
+  color: black;
+  background-color: white;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
 `;
 
 const OnlyWriter = styled.span`
   width: 60px;
-  height: 25px;
-  font-size: 14px;
+  height: 20px;
+  font-size: 15px;
   padding-top: 3px;
+  font-family: 'SCDream4R';
   font-weight: 500;
-  color: #fff;
-  background-color: #1a83ff;
-  border-radius: 5px;
+  color: black;
+  background-color: white;
   margin: 0 auto;
-  margin: 5px 0px 10px 0px;
-  text-align: center;
+  text-align: left;
 `;
+
 const Field = styled.span`
   font-size: 12px;
   width: 60px;
@@ -165,26 +189,33 @@ const Field = styled.span`
   color: #aaa;
 `;
 
+const ProfileImg = styled.img`
+  width: 45px;
+  height: 45px;
+  padding: 3px;
+  background-color: #eee;
+  border-radius: 50px;
+`;
+
 const TimeBox = styled.div`
-  display: flex;
-  width: 100%;
+  width: 100px;
   height: 30px;
   font-size: 14px;
   padding-top: 3px;
-  justify-content: flex-end;
   color: #aaa;
   font-weight: 600;
 `;
 
-const BoardHeader = styled.span`
-  width: 97%;
-  display: flex;
-  justify-content: space-between;
+const ViewCounts = styled.div`
+  width: 100px;
+  margin-left: 10px;
+  padding-top: 3px;
+  font-size: 14px;
+  color: #aaa;
 `;
 
 const NameBox = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
 `;
 
@@ -197,13 +228,18 @@ const InfoBox = styled.li`
   justify-content: center;
 `;
 
-const Title = styled.div`
-  font-size: 20px;
-  padding-left: 10px;
-`;
 const Content = styled.div`
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
   font-size: 13px;
-  padding-left: 10px;
+  padding-left: 2px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+`;
+
+const ButtonBox = styled.div`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 `;
 
 const DeleteBoardBox = styled.div``;

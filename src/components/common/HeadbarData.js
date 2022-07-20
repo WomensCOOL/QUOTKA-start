@@ -4,8 +4,8 @@ import * as TiIcons from 'react-icons/ti';
 
 export const HeadbarData = [
   {
-    title: '쿼카마스터',
-    path: '/board',
+    title: '쿼트마스터',
+    path: '/boardlist',
     icon: <TiIcons.TiClipboard />,
     Name: 'nav-text',
   },
