@@ -50,24 +50,24 @@ class BoardList extends Component {
                   style={{ textDecoration: 'none', color: 'black' }}
                   to="/board/quotkaId"
                 >
-                  게시글1
+                  New Title Test
                 </Link>
               </td>
-              <td>artistJay</td>
+              <td>쿼억하</td>
               <td>2022-03-19</td>
               <td>32</td>
             </tr>
             <tr>
               <td>2</td>
               <td>게시글2</td>
-              <td>artistJay</td>
+              <td>aaaaa</td>
               <td>2022-03-19</td>
               <td>18</td>
             </tr>
             <tr>
               <td>3</td>
               <td>게시글2</td>
-              <td>artistJay</td>
+              <td>bbbbb</td>
               <td>2022-03-19</td>
               <td>21</td>
             </tr>
