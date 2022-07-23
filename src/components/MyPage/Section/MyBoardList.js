@@ -154,12 +154,14 @@ const BoardUl = styled.tbody`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'SCDream-bold';
-  font-weight: 100;
+  border-collapse: separate;
+  border-spacing: 0 10px;
   .boardTitle {
     display: float;
     padding: 7px;
     font-size: 14px;
+    font-family: 'SCDream-bold';
+    font-weight: 100;
   }
   .num {
     margin-right: 10%;

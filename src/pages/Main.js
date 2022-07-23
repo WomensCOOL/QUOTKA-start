@@ -13,7 +13,18 @@ const Main = () => {
         <Img src={Banner} />
         Trending on QUOTKA
       </MainTitle>
-      <TrendingBox />
+      <TrendingContent>
+        <TrendingBox />
+        <TrendingBox />
+        <TrendingBox />
+      </TrendingContent>
+      <TrendingContent>
+        <TrendingBox />
+        <TrendingBox />
+        <TrendingBox />
+      </TrendingContent>
+      <hr></hr>
+      <MainTitle>This Week</MainTitle>
     </>
   );
 };
@@ -23,8 +34,9 @@ export default Main;
 const MainTitle = styled.h2`
   margin: 0 auto;
   padding-top: 15px;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 900;
+  padding-bottom: 25px;
 `;
 
 const MainImg = styled.img`
@@ -48,4 +60,8 @@ const MainBox = styled.div`
   background-color: gray;
   margin-left: -200px;
   margin-top: -50px;
+`;
+
+const TrendingContent = styled.div`
+  display: float;
 `;

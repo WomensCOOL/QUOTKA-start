@@ -6,22 +6,23 @@ const TrendingBox = () => {
   return (
     <>
       <Box>
-        <ul className="boxUl">
-          <li>
-            <Num>01</Num>
-          </li>
-          <li>
-            <Infrom>
-              <ul className="informUl">
-                <li>
-                  <Img src={Quotka} />
-                </li>
-                <li className="name">name</li>
-                <li className="content">쿼카는 행복한가? 해피쿼카에 대해</li>
-              </ul>
-            </Infrom>
-          </li>
-        </ul>
+        <table className="trendingBox">
+          <tr>
+            <th className="num">01</th>
+            <td className="user">
+              <Img src={Quotka} />
+              name
+            </td>
+          </tr>
+          <tr>
+            <th className="num"></th>
+            <td className="content">쿼카는 행복한가? 해피쿼카에 대해</td>
+          </tr>
+          <tr>
+            <th className="num"></th>
+            <td className="date">2022.07.23</td>
+          </tr>
+        </table>
       </Box>
     </>
   );
@@ -33,35 +34,29 @@ const Box = styled.h2`
   margin: 0 auto;
   width: 30%;
   height: 150px;
-  background-color: gray;
 
-  .boxUl li {
-    float: left;
+  .num {
+    padding-right: 8px;
+    font-size: 25px;
+    font-family: 'SCDream-bold';
   }
-`;
 
-const Infrom = styled.ul`
-  margin: 0 auto;
-  height: 150px;
-  float: left;
-  margin-top: 20px;
-  background-color: yellow;
-  .name {
-    margin-left: 10px;
-    font-weight: 600;
+  .date {
+    font-size: 5px;
   }
+
   .content {
-    padding: 10px;
+    vertical-align: middle;
+    height: 70px;
+  }
+  .user {
+    vertical-align: middle;
   }
 `;
-const Num = styled.h2`
-  margin: 0 auto;
-  padding-top: 15px;
-  font-size: 25px;
-  font-weight: 900;
-`;
+
 const Img = styled.img`
   width: 27px;
   height: 27px;
-  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 `;
