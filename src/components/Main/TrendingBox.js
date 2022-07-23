@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Quotka from 'assests/Logo.png';
 
-const TrendingBox = () => {
+const TrendingBox = props => {
   return (
     <>
       <Box>
         <table className="trendingBox">
           <tr>
-            <th className="num">01</th>
+            <th className="num">{props.num}</th>
             <td className="user">
               <Img src={Quotka} />
               name
@@ -39,6 +39,7 @@ const Box = styled.h2`
     padding-right: 8px;
     font-size: 25px;
     font-family: 'SCDream-bold';
+    color: #c5ad81;
   }
 
   .date {

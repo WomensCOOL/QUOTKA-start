@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Banner from 'assests/Logo.png';
 import TrendingBox from '../components/Main/TrendingBox';
+import HOF from '../components/Main/HOF';
 
 const Main = () => {
   return (
@@ -14,17 +15,26 @@ const Main = () => {
         Trending on QUOTKA
       </MainTitle>
       <TrendingContent>
-        <TrendingBox />
-        <TrendingBox />
-        <TrendingBox />
+        <TrendingBox num={'01'} />
+        <TrendingBox num={'02'} />
+        <TrendingBox num={'03'} />
       </TrendingContent>
       <TrendingContent>
-        <TrendingBox />
-        <TrendingBox />
-        <TrendingBox />
+        <TrendingBox num={'04'} />
+        <TrendingBox num={'05'} />
+        <TrendingBox num={'06'} />
       </TrendingContent>
       <hr></hr>
-      <MainTitle>This Week</MainTitle>
+      <MainTitle>
+        <Img src={Banner} />
+        This Week Quote Master
+      </MainTitle>
+      <TrendingContent>
+        <HOF></HOF>
+        <HOF></HOF>
+        <HOF></HOF>
+        <HOF></HOF>
+      </TrendingContent>
     </>
   );
 };
@@ -56,7 +66,7 @@ const MainBox = styled.div`
   font-size: 150px;
 
   height: 300px;
-  width: 1080px;
+  width: 1280px;
   background-color: gray;
   margin-left: -200px;
   margin-top: -50px;
