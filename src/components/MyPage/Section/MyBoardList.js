@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
-//npm i react-bootstrap bootstrap
 import { useDispatch } from 'react-redux';
 import { getMyBoard } from 'modules/actions/user';
 import { updateBoard } from 'modules/actions/board';
@@ -79,114 +77,101 @@ function MyBoardList({ history }) {
 
   return (
     <>
-      <BoardUl>
-        <ul className="boardTitle">
-          <li className="num">번호</li>
-          <li className="date">일자</li>
-          <li className="title">글 제목</li>
-          <li className="content">본문 내용</li>
-        </ul>
-      </BoardUl>
-      <hr></hr>
-      <BoardUl striped bordered hover>
-        <thead>
-          <tr className="boardTitle">
-            <th className="num">번호</th>
-            <th className="date">제목</th>
-            <th className="title">작성자</th>
-            <th className="content">작성일</th>
-          </tr>
-        </thead>
-      </BoardUl>
-
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td className="num">게시글1</td>
-          <td>에어니는</td>
-          <td>2022-03-19</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>게시글2</td>
-          <td>게시판이</td>
-          <td>2022-03-19</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>게시글2</td>
-          <td>어려워요</td>
-          <td>2022-03-19</td>
-        </tr>
-      </tbody>
+      <BoardUI>
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th className="date">일자</th>
+              <th>글 제목</th>
+              <th>본문 내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="num">1</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">2</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">3</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">4</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">5</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </BoardUI>
     </>
   );
 }
 
 export default withRouter(MyBoardList);
 
-const BoardButton = styled.button`
-  border-radius: 8px;
-  font-weight: 600;
-  width: 450px;
-  height: 30px;
-  padding-left: 30px;
-  letter-spacing: 20px;
-  text-align: center;
-  background-color: #1a83ff;
-  color: #fff;
-  &:active {
-    opacity: 0.7;
-  }
-  margin-bottom: 30px;
-`;
-
-const EditButton = styled.button`
-  color: #ff0200;
-  font-size: 12px;
-  top: 30px;
-  right: 48px;
-  position: absolute;
-`;
-
-const BoardUl = styled.tbody`
+const BoardUI = styled.tbody`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-collapse: separate;
   border-spacing: 0 10px;
-  .boardTitle {
-    display: float;
-    padding: 7px;
+
+  .num {
+    width: 5%;
+    text-align: center;
+  }
+  .date {
+    width: 7%;
+  }
+  .title {
+    width: 25%;
+    text-align: center;
+  }
+  .content {
+    width: 63%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 14px;
+    border-top: 1px solid #444444;
+    margin-top: 7px;
+  }
+
+  td {
+    text-aligh: left;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+    margin-left: 10px;
+  }
+  th {
+    padding: 15px;
+    border-bottom: 1px solid #444444;
+    margin-left: 10px;
+  }
+
+  thead {
     font-family: 'SCDream-bold';
     font-weight: 100;
   }
-  .num {
-    margin-right: 10%;
-  }
-  .date {
-    margin-right: 20%;
-  }
-  .title {
-    margin-right: 20%;
-  }
-  .content {
-    margin-right: 20%;
-  }
-`;
-
-const NothingBox = styled.div`
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
-`;
-
-const NothingAlert = styled.p`
-  font-family: 'SCDream';
-  font-weigt: 900;
-  font-size: 20px;
-  color: #ff0200;
 `;

@@ -73,7 +73,6 @@ export default function Orgchart() {
           </div>
         </ul>
       </MenuList>
-      <hr></hr>
 
       <div>{tabContArr[activeIndex].tabCont}</div>
     </div>
