@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Banner from 'assests/Logo.png';
+import Logo from 'assests/Logo.png';
+import Banner from 'assests/Banner.svg';
 import TrendingBox from '../components/Main/TrendingBox';
 import HOF from '../components/Main/HOF';
 
@@ -8,10 +9,11 @@ const Main = () => {
   return (
     <>
       <MainBox>
-        <MainImg src={Banner} /> banner
+        <img src={Banner} alt="banner" />
       </MainBox>
+
       <MainTitle>
-        <Img src={Banner} />
+        <Img src={Logo} />
         Trending on QUOTKA
       </MainTitle>
       <TrendingContent>
@@ -26,7 +28,7 @@ const Main = () => {
       </TrendingContent>
       <hr></hr>
       <MainTitle>
-        <Img src={Banner} />
+        <Img src={Logo} />
         This Week Quote Master
       </MainTitle>
       <TrendingContent>
@@ -49,12 +51,6 @@ const MainTitle = styled.h2`
   padding-bottom: 25px;
 `;
 
-const MainImg = styled.img`
-  width: 150px;
-  height: 150px;
-  margin-left: 17%;
-  margin-top: 5%;
-`;
 const Img = styled.img`
   width: 27px;
   height: 27px;
@@ -62,14 +58,9 @@ const Img = styled.img`
   padding-top: 5px;
 `;
 const MainBox = styled.div`
-  font-weight: 900;
-  font-size: 150px;
-
-  height: 300px;
-  width: 1280px;
-  background-color: gray;
   margin-left: -200px;
-  margin-top: -50px;
+  margin-top: -100px;
+  width: 1100px;
 `;
 
 const TrendingContent = styled.div`

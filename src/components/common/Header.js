@@ -8,7 +8,6 @@ import { useDispatch } from 'react-redux';
 import { HeadbarData } from './HeadbarData';
 import { IconContext } from 'react-icons';
 import 'styles/header/header.css';
-import Logo from 'assests/Logo.png';
 import Profile from 'assests/Profile.png';
 
 const Header = props => {
@@ -57,6 +56,7 @@ const Header = props => {
                   <Link to="/login" onClick={onClick} className="loginbar">
                     로그인
                   </Link>
+
                   <Link to="/register" onClick={onClick} className="registbar">
                     회원가입
                   </Link>
@@ -64,27 +64,24 @@ const Header = props => {
               ) : (
                 <>
                   <nav className="userView">
+                    <button onClick={onClickLogout} className="logoutbar">
+                      로그아웃
+                    </button>
                     <Link to="/mypage" className="profileBox">
                       <img src={Profile} className="profile" />
                       <input
                         type="text"
                         className="userName"
-                        value={userName + '님 환영합니다.'}
+                        value={userName + ' ' + '님!'}
                         readOnly
                       />
                     </Link>
-                    <button onClick={onClickLogout} className="logoutbar">
-                      로그아웃
-                    </button>
                   </nav>
                 </>
               )}
             </div>
             <div class Name="logo-menu">
               <p className="QuotkaNav">
-                <Link to="/">
-                  <img src={Logo} className="logo-img" />
-                </Link>
                 <Link to="/" className="Quotka">
                   QUOTKA
                 </Link>

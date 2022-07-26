@@ -6,13 +6,15 @@
 .navbar {
   font-family: 'SCDream';
   background-color: #fff;
-  width: 100%;
   height: 60px;
+  width: 100%;
   padding-top: 5px;
   display: flex;
   justify-items: center;
   align-items: center;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .nav-text {
@@ -58,13 +60,13 @@ span {
 .Quotka {
   letter-spacing: 1.8px;
   font-size: 25px;
-  margin-right: 60%;
+  margin-right: 26%;
   font-weight: 900;
 }
 .QuotkaNav {
   position: absolute;
   right: 0;
-  left: 15%;
+  left: 10%;
   top: 7px;
   display: flex;
   flex-direction: row;
@@ -80,7 +82,7 @@ span {
 .registbar {
   border-radius: 8px;
   font-weight: 600;
-  padding: 7px 8px 5px 8px;
+  padding: 7px 0px 5px 0px;
   color: #000;
 }
 .registbar:active {
@@ -89,8 +91,7 @@ span {
 /* 로그인 버튼 */
 .loginbar {
   font-weight: 600;
-  padding: 7px 8px 5px 8px;
-  margin-right: 10px;
+  padding: 7px 30px 0px 0px;
 }
 
 .loginbar:active {
@@ -100,12 +101,8 @@ span {
 
 /* 로그아웃 */
 .logoutbar {
-  border: 1px solid #ccc;
-  border-radius: 8px;
   font-weight: 600;
-  width: 90px;
-  padding: 7px 8px 5px 8px;
-  margin-right: 10px;
+  padding: 7px 30px 5px 0px;
 }
 .logoutbar:active {
   opacity: 0.5;
@@ -122,7 +119,7 @@ span {
   width: 300px;
   margin: 20px;
 }
-/* 프로필 이미지 + ***님 환영합니다 */
+/* 프로필 이미지 + ***님! */
 .profileBox {
   width: 200px;
   height: 40px;
@@ -131,12 +128,14 @@ span {
   align-items: center;
   background: none;
   cursor: pointer;
-  margin-left: 55px;
+  margin-left: -20px;
 }
-/* ***님 환영합니다 */
+/* ***님! */
 .userName {
-  font-size: 15px;
-  font-weight: 600;
+  font-family: 'SCDream';
+  padding: 7px 0px 5px 0px;
+  font-size: 16px;
+  font-weight: 900;
   padding-top: 4px;
   padding-left: 5px;
   width: 145px;
