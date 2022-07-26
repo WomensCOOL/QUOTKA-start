@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { getMyComment } from 'modules/actions/user';
 import AddBoard from 'components/Board/Section/Board/AddBoard';
 import styled from 'styled-components';
+import Paging from 'components/common/Pagination';
 
 function MyComment() {
   const dispatch = useDispatch();
@@ -83,6 +84,7 @@ function MyComment() {
           </tbody>
         </table>
       </BoardUI>
+      <Paging />
       {CommentsFrom.length === 0 && (
         <NothingBox>
           <NothingAlert>댓글 목록이 없습니다.</NothingAlert>

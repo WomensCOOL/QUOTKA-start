@@ -5,7 +5,7 @@ export const FormBox = styled.form`
   margin: 0 auto;
   width: 600px;
   padding: 50px;
-  padding-top: 30px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +14,7 @@ export const FormBox = styled.form`
   .google-img {
     width: 30px;
     margin: 0 auto;
+    cursor: pointer;
   }
 `;
 
