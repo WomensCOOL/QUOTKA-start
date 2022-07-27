@@ -5,7 +5,9 @@
 
 h1 {
   font-family: 'SCDream4R';
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  font-size: 20px;
 }
 
 .container {

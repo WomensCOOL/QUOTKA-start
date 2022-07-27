@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import UpdateTime from 'library/utils/updateTime';
-import DeleteBoard from 'components/Board/Section/Board/DeleteBoard';
-import ScrapButton from '../Scrap/ScrapButton';
+import DeleteBoard from 'components/BoardQuoteMaster/Section/Board/DeleteBoard';
+import ScrapButton from './ScrapButton';
 import CommentButton from '../Comment/CommentButton';
 import Github from 'assests/Github.png';
 import styled from 'styled-components';

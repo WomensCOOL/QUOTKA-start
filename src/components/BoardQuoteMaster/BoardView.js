@@ -7,9 +7,10 @@ import Pagination from '@material-ui/lab/Pagination';
 import { useDispatch } from 'react-redux';
 import { uploadBoard, listBoard } from 'modules/actions/board';
 import styled from 'styled-components';
-import Tag from 'components/Board/Section/Board/Tag';
-import SourceTag from 'components/Board/Section/Board/SourceTag';
-import TitleBoxContainer from 'components/write/BoardTitle';
+import Tag from 'components/BoardQuoteMaster/Section/Board/Tag';
+import SourceTag from 'components/BoardQuoteMaster/Section/Board/SourceTag';
+import TitleBoxContainer from 'components/BoardQuoteMaster/Section/Board/BoardTitle';
+import BoardList from 'pages/BoardListQuoteMaster';
 
 function BoardView({ history }) {
   const dispatch = useDispatch();
@@ -93,7 +94,7 @@ function BoardView({ history }) {
 
   return (
     <>
-      <Link to="/mypage/email">
+      <Link style={{ textDecoration: 'none', color: 'black' }} to="/boardlist">
         <TitleBoxContainer></TitleBoxContainer>
       </Link>
       <BoardBox>
@@ -119,9 +120,11 @@ function BoardView({ history }) {
               <SourceTag></SourceTag>
             </li>
             <li>
-              <BoardButton type="submit" onClick={onSubmit}>
-                작성
-              </BoardButton>
+              <Link to="/board/quotkaId">
+                <BoardButton type="submit" onClick={onSubmit}>
+                  작성
+                </BoardButton>
+              </Link>
               <CancelButton type="submit" onClick={onSubmit}>
                 취소
               </CancelButton>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getMyComment } from 'modules/actions/user';
-import AddBoard from 'components/Board/Section/Board/AddBoard';
+import AddBoard from 'components/BoardQuoteMaster/Section/Board/AddBoard';
 import styled from 'styled-components';
 
 function MyComment() {
