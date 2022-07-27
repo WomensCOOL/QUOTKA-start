@@ -95,9 +95,10 @@ function ScrapButton({ boardId, boardTitle, boardContent, boardWriter }) {
 export default ScrapButton;
 
 const Scrap = styled.img`
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   margin-right: -23px;
+  margin-top: 3px;
 `;
 
 const Counts = styled.span`

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import loadable from '@loadable/component';
 import AppLayout from 'components/common/AppLayout';
 import Auth from 'library/utils/auth';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import BoardListQuoteMaster from 'pages/BoardListQuoteMaster';
 
 const Main = loadable(() => import('pages/Main'));

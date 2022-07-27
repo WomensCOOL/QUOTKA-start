@@ -117,15 +117,15 @@ const WriterInfo = styled.div`
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  margin-top: -5px;
+  margin-top: 5px;
 
   .profileImg {
     margin-right: 0px;
   }
 
   ul {
-    margin-left: 0px;
-    margin-top: 18px;
+    margin-left: 10px;
+    margin-top: 5px;
   }
 
   .timeView {
@@ -140,6 +140,7 @@ const Title = styled.div`
   font-size: 24px;
   padding-left: 0px;
   margin-bottom: 1px;
+  margin-top: -5px;
 `;
 
 const AddBoardBox = styled.div`
@@ -195,6 +196,7 @@ const ProfileImg = styled.img`
   padding: 3px;
   background-color: #eee;
   border-radius: 50px;
+  margin-right: 5px;
 `;
 
 const TimeBox = styled.div`
@@ -237,6 +239,7 @@ const Content = styled.div`
   padding-left: 2px;
   padding-top: 30px;
   padding-bottom: 35px;
+  margin-top: 20px;
   line-height: 25px;
   font-weight: 900;
 `;

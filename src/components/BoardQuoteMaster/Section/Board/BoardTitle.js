@@ -5,7 +5,7 @@ const BoardTitleBlock = styled.div`
   width: 1000px;
   padding-top: 0rem;
   font-family: 'SCDream4R';
-  font-size: 15px;
+  font-size: 23px;
   font-weight: normal;
   margin-left: -5px;
   margin-bottom: 20px;
@@ -14,7 +14,7 @@ const BoardTitleBlock = styled.div`
 const BoardTitleBox = ({}) => {
   return (
     <BoardTitleBlock>
-      <h3>쿼트마스터</h3>
+      <div>쿼트마스터</div>
     </BoardTitleBlock>
   );
 };

@@ -104,7 +104,7 @@ function BoardDetail(props) {
       <BoardBox key={props.id}>
         <Link
           style={{ textDecoration: 'none', color: 'black' }}
-          to="/boardlist"
+          to="/quotemaster/boardlist"
         >
           <BoardTitleBox></BoardTitleBox>
         </Link>
@@ -128,7 +128,7 @@ function BoardDetail(props) {
             onChange={onChange}
           />
           <CommentButton type="submit" onClick={onSubmit}>
-            댓글 등록
+            작성
           </CommentButton>
         </form>
         {Comments &&

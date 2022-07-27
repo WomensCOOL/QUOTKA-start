@@ -128,7 +128,7 @@ function BoardDetail(props) {
             onChange={onChange}
           />
           <CommentButton type="submit" onClick={onSubmit}>
-            댓글 등록
+            작성
           </CommentButton>
         </form>
         {Comments &&

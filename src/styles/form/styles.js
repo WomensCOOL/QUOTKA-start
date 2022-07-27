@@ -29,7 +29,7 @@ export const Title = styled.form`
   letter-spacing: 1.2px;
 `;
 
-export const FormTitle = styled.h1`
+export const FormTitle = styled.div`
   font-size: 50px;
   font-weight: 900;
   display: flex;
@@ -49,7 +49,7 @@ export const FormTitle = styled.h1`
   }
 `;
 
-export const FormSmallTitle = styled.h1`
+export const FormSmallTitle = styled.div`
   display: flex;
   justify-content: center;
   font-weight: 600;
@@ -106,7 +106,8 @@ export const PasswordBox = styled.div`
 export const PasswordButton = styled.div`
   position: absolute;
   bottom: 0;
-  left: 215px;
+  left: 205px;
+  margin-bottom: 12px;
 `;
 
 export const LoginButton = styled.button`

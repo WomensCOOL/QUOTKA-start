@@ -117,15 +117,15 @@ const WriterInfo = styled.div`
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  margin-top: -5px;
+  margin-top: 5px;
 
   .profileImg {
     margin-right: 0px;
   }
 
   ul {
-    margin-left: 0px;
-    margin-top: 18px;
+    margin-left: 10px;
+    margin-top: 5px;
   }
 
   .timeView {
@@ -137,9 +137,10 @@ const WriterInfo = styled.div`
 const Title = styled.div`
   font-family: 'SCDream4R';
   font-weight: bold;
-  font-size: 24px;
+  font-size: 23px;
   padding-left: 0px;
   margin-bottom: 1px;
+  margin-top: -15px;
 `;
 
 const AddBoardBox = styled.div`
@@ -195,6 +196,7 @@ const ProfileImg = styled.img`
   padding: 3px;
   background-color: #eee;
   border-radius: 50px;
+  margin-right: 5px;
 `;
 
 const TimeBox = styled.div`
@@ -203,15 +205,18 @@ const TimeBox = styled.div`
   font-size: 14px;
   padding-top: 3px;
   color: #aaa;
-  font-weight: 600;
+  font-family: 'SCDream';
+  font-weight: 900;
 `;
 
 const ViewCounts = styled.div`
   width: 100px;
   margin-left: 10px;
   padding-top: 3px;
+  font-family: 'SCDream';
   font-size: 14px;
   color: #aaa;
+  font-weight: 900;
 `;
 
 const NameBox = styled.div`
@@ -230,11 +235,13 @@ const InfoBox = styled.li`
 
 const Content = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 15px;
+  font-size: 13px;
   padding-left: 2px;
   padding-top: 30px;
   padding-bottom: 35px;
+  margin-top: 20px;
   line-height: 25px;
+  font-weight: 900;
 `;
 
 const ButtonBox = styled.div`

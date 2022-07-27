@@ -173,8 +173,10 @@ function BoardView({ history }) {
 export default withRouter(BoardView);
 
 const BoardBox = styled.div`
-  width: 1000px;
+  width: 60%;
   margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
   height: 100%;
 `;
 
@@ -190,6 +192,7 @@ const Alert = styled.p`
 const BoardWriteForm = styled.form`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 const BoardButton = styled.button`
