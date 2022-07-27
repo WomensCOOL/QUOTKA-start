@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { likeList } from 'modules/actions/like';
-import MyLikeBoard from 'components/Board/Section/Like/MyLikeBoard';
+import MyLikeBoard from 'components/BoardQuoteMaster/Section/Like/MyLikeBoard';
 import styled from 'styled-components';
 
 function myFavorite() {

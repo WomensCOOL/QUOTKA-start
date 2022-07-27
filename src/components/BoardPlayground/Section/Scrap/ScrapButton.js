@@ -84,7 +84,9 @@ function ScrapButton({ boardId, boardTitle, boardContent, boardWriter }) {
     <>
       <button onClick={handleScrap}>
         <Scrap src={ScrapIcon} />
-        <p>{scrapCounts}</p>
+        <Counts>
+          <span>{scrapCounts}</span>
+        </Counts>
       </button>
     </>
   );
@@ -93,6 +95,15 @@ function ScrapButton({ boardId, boardTitle, boardContent, boardWriter }) {
 export default ScrapButton;
 
 const Scrap = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-right: -23px;
+`;
+
+const Counts = styled.span`
+  font-size: 15px;
+  color: gray;
+  text-align: left;
+  margin-top: 4px;
+  margin-right: 10px;
 `;

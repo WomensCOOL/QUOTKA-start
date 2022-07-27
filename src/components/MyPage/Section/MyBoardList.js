@@ -3,12 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getMyBoard } from 'modules/actions/user';
 import { updateBoard } from 'modules/actions/board';
-import AddBoard from 'components/Board/Section/Board/AddBoard';
+import AddBoard from 'components/BoardQuoteMaster/Section/Board/AddBoard';
 import styled from 'styled-components';
-import BoardTextarea from 'components/Board/Section/Board/BoardTextarea';
-import BoardInput from 'components/Board/Section/Board/BoardInput';
-import axios from 'axios';
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from '@loadable/component';
+
 
 function MyBoardList({ history }) {
   const dispatch = useDispatch();

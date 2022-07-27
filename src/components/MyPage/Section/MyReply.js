@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import AddComment from 'components/Board/Section/Comment/AddComment';
-import ReplyInput from 'components/Board/Section/Reply/ReplyInput';
+import AddComment from 'components/BoardQuoteMaster/Section/Comment/AddComment';
+import ReplyInput from 'components/BoardQuoteMaster/Section/Reply/ReplyInput';
 import { getMyReply } from 'modules/actions/user';
 import styled from 'styled-components';
 import Reply from 'assests/Reply.png';
