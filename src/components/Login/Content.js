@@ -11,6 +11,12 @@ import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import StyledCheckBox from 'styles/container/styles';
+import googleLogin from 'components/Login/googleLogin';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+
+const clientId =
+  '963235660579-40t446lr6tf6hk722t1eorab1l87chru.apps.googleusercontent.com';
+
 import {
   FormBox,
   FormTitle,
@@ -21,11 +27,41 @@ import {
   LoginButton,
   FilledInput,
   ErrorMessage,
-  GoogleImg,
+  GoogleItem,
   TextBox,
 } from 'styles/form/styles';
 
 function LoginPage() {
+  const [loading, setLoading] = useState('Loading...');
+  const [user, setUser] = useState(null);
+
+  const handleLoginSuccess = response => {
+    console.log('Login Success ', response);
+    setUser(response.profileObj);
+    setLoading();
+  };
+
+  const handleLoginFailure = error => {
+    console.log('Login Failure ', error);
+    setLoading();
+  };
+
+  const handleLogoutSuccess = response => {
+    console.log('Logout Success ', response);
+    setUser(null);
+  };
+
+  const handleLogoutFailure = error => {
+    console.log('Logout Failure ', error);
+  };
+
+  const handleRequest = () => {
+    setLoading('Loading...');
+  };
+
+  const handleAutoLoadFinished = () => {
+    setLoading();
+  };
   const {
     register,
     handleSubmit,
@@ -131,8 +167,36 @@ function LoginPage() {
         checked={RememberId}
         onChange={handleChange}
       ></StyledCheckBox>
-      <img src={Google} className="google-img" />
-
+      <GoogleItem>
+        {user ? (
+          <div>
+            <div className="name">Welcome {user.name}!</div>
+            <GoogleLogout
+              clientId={clientId}
+              onLogoutSuccess={handleLogoutSuccess}
+              onFailure={handleLogoutFailure}
+            />
+            <pre>{JSON.stringify(user, null, 2)}</pre>
+          </div>
+        ) : (
+          <div className="google">
+            <GoogleLogin
+              clientId={clientId}
+              render={renderProps => (
+                <button
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                  className="button"
+                >
+                  <img src={Google} className="google-img" />
+                </button>
+              )}
+              buttonText="Login"
+              isSignedIn={true}
+            />
+          </div>
+        )}
+      </GoogleItem>
       <TextBox>
         <span>아직 QUOTKA 회원이 아니신가요?</span>
         <Link to="/register">

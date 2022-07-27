@@ -102,10 +102,14 @@ span {
 /* 로그아웃 */
 .logoutbar {
   font-weight: 600;
+  width: 100px;
+  background-color: white;
+
   padding: 7px 30px 5px 0px;
 }
 .logoutbar:active {
   opacity: 0.5;
+  color: #ccc;
 }
 /* 프로필 크기 */
 .profile {

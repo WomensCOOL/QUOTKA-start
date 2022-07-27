@@ -125,9 +125,19 @@ export const LoginButton = styled.button`
   }
 `;
 
+export const GoogleItem = styled.div`
+  font-size: 10px;
+  margin: 0 auto;
+
+  .button {
+    background-color: white;
+    width: 50px;
+  }
+`;
+
 export const TextBox = styled.div`
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
   text-align: center;
   padding-right: 17px;
