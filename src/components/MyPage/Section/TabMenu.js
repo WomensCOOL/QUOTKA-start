@@ -18,6 +18,21 @@ export default function Orgchart() {
           className={activeIndex === 0 ? 'submenu focused' : 'submenu'}
           onClick={() => tabClickHandler(0)}
         >
+          저장한 게시글
+        </li>
+      ),
+      tabCont: (
+        <div>
+          <Favorite />
+        </div>
+      ),
+    },
+    {
+      tabTitle: (
+        <li
+          className={activeIndex === 1 ? 'submenu focused' : 'submenu'}
+          onClick={() => tabClickHandler(1)}
+        >
           내가 쓴 게시글
         </li>
       ),
@@ -30,8 +45,8 @@ export default function Orgchart() {
     {
       tabTitle: (
         <li
-          className={activeIndex === 1 ? 'submenu focused' : 'submenu'}
-          onClick={() => tabClickHandler(1)}
+          className={activeIndex === 2 ? 'submenu focused' : 'submenu'}
+          onClick={() => tabClickHandler(2)}
         >
           내가 쓴 댓글
         </li>
@@ -39,21 +54,6 @@ export default function Orgchart() {
       tabCont: (
         <div>
           <MyComment />
-        </div>
-      ),
-    },
-    {
-      tabTitle: (
-        <li
-          className={activeIndex === 2 ? 'submenu focused' : 'submenu'}
-          onClick={() => tabClickHandler(2)}
-        >
-          저장한 게시글
-        </li>
-      ),
-      tabCont: (
-        <div>
-          <Favorite />
         </div>
       ),
     },
@@ -73,7 +73,6 @@ export default function Orgchart() {
           </div>
         </ul>
       </MenuList>
-      <hr></hr>
 
       <div>{tabContArr[activeIndex].tabCont}</div>
     </div>

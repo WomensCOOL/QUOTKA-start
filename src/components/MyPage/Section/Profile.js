@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { withRouter, Link } from 'react-router-dom';
 import Profile from 'assests/Profile.png';
-function LoginButton() {
-  return <button>로그인</button>;
-}
-function LogoutButton() {
-  return <button>로그아웃</button>;
-}
 
 const ProfileLeft = props => {
   return (

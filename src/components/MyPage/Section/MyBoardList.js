@@ -5,8 +5,7 @@ import { getMyBoard } from 'modules/actions/user';
 import { updateBoard } from 'modules/actions/board';
 import AddBoard from 'components/BoardQuoteMaster/Section/Board/AddBoard';
 import styled from 'styled-components';
-import BoardTextarea from 'components/BoardQuoteMaster/Section/Board/BoardTextarea';
-import BoardInput from 'components/BoardQuoteMaster/Section/Board/BoardInput';
+
 
 function MyBoardList({ history }) {
   const dispatch = useDispatch();
@@ -75,114 +74,101 @@ function MyBoardList({ history }) {
 
   return (
     <>
-      {show && (
-        <BoardWriteForm onSubmit={onSubmit}>
-          <ul>
-            <li>
-              <BoardInput
-                name="boardTitle"
-                placeholder="제목을 작성해주세요"
-                value={boardTitle}
-                onChange={onChange}
-              />
-            </li>
-            <li>
-              <BoardTextarea
-                name="boardContent"
-                placeholder="내용을 작성해주세요."
-                value={boardContent}
-                onChange={onChange}
-              />
-            </li>
-            <li>
-              <BoardButton type="submit" onClick={onSubmit}>
-                수정
-              </BoardButton>
-            </li>
-          </ul>
-        </BoardWriteForm>
-      )}
-      {MyBoard.length === 0 && (
-        <NothingBox>
-          <NothingAlert>게시글 목록이 없습니다.</NothingAlert>
-        </NothingBox>
-      )}
-      {MyBoard &&
-        MyBoard.map((board, index) => {
-          return (
-            <React.Fragment key={index}>
-              <BoardUl>
-                <AddBoard
-                  href="{`../board/${board._id}`}"
-                  id={board._id}
-                  user={board.userFrom}
-                  time={board.createdAt}
-                  writer={board.boardWriter}
-                  title={board.boardTitle}
-                  content={board.boardContent}
-                  onRemove={onRemove}
-                />
-                <EditButton
-                  onClick={() => {
-                    getBoardId(board._id);
-                    setShow(!show);
-                  }}
-                >
-                  수정
-                </EditButton>
-              </BoardUl>
-            </React.Fragment>
-          );
-        })}
+      <BoardUI>
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th className="date">일자</th>
+              <th>글 제목</th>
+              <th>본문 내용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="num">1</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">2</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">3</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">4</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">5</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </BoardUI>
     </>
   );
 }
 
 export default withRouter(MyBoardList);
 
-const BoardWriteForm = styled.form`
+const BoardUI = styled.tbody`
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-`;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 
-const BoardButton = styled.button`
-  border-radius: 8px;
-  font-weight: 600;
-  width: 450px;
-  height: 30px;
-  padding-left: 30px;
-  letter-spacing: 20px;
-  text-align: center;
-  background-color: #1a83ff;
-  color: #fff;
-  &:active {
-    opacity: 0.7;
+  .num {
+    width: 5%;
+    text-align: center;
   }
-  margin-bottom: 30px;
-`;
+  .date {
+    width: 7%;
+  }
+  .title {
+    width: 25%;
+    text-align: center;
+  }
+  .content {
+    width: 63%;
+  }
 
-const EditButton = styled.button`
-  color: #ff0200;
-  font-size: 12px;
-  top: 30px;
-  right: 48px;
-  position: absolute;
-`;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-top: 1px solid #444444;
+    margin-top: 7px;
+  }
 
-const BoardUl = styled.ul`
-  position: relative;
-`;
+  td {
+    text-aligh: left;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+    margin-left: 10px;
+  }
+  th {
+    padding: 15px;
+    border-bottom: 1px solid #444444;
+    margin-left: 10px;
+  }
 
-const NothingBox = styled.div`
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
-`;
-
-const NothingAlert = styled.p`
-  font-family: 'SCDream';
-  font-weigt: 900;
-  font-size: 20px;
-  color: #ff0200;
+  thead {
+    font-family: 'SCDream-bold';
+    font-weight: 100;
+  }
 `;
