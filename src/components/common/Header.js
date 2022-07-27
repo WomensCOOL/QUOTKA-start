@@ -80,7 +80,7 @@ const Header = props => {
                 </>
               )}
             </div>
-            <div class Name="logo-menu">
+            <div className="logo-menu">
               <p className="QuotkaNav">
                 <Link to="/" className="Quotka">
                   QUOTKA

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import UpdateTime from 'library/utils/updateTime';
 import DeleteBoard from './DeleteBoard';
 import LikeButton from '../Like/LikeButton';
+import ScrapButton from '../Scrap/ScrapButton';
 import CommentButton from '../Comment/CommentButton';
 import ShowInfo from '../ShowInfo/ShowInfo';
 import Github from 'assests/Github.png';
@@ -88,6 +89,12 @@ function AddBoard(props) {
         </Link>
         <div style={{ textAlign: 'right' }}>
           <LikeButton
+            boardId={props.id}
+            boardWriter={props.writer}
+            boardTitle={props.title}
+            boardContent={props.content}
+          />
+          <ScrapButton
             boardId={props.id}
             boardWriter={props.writer}
             boardTitle={props.title}

@@ -4,8 +4,8 @@ import palette from '../../lib/styles/palette';
 import Button from '../common/Button';
 import Responsive from '../common/Responsive';
 import Profile from 'assests/Profile.png';
-import Like from 'assests/Like.png';
-import Scrap from '../../assests/Comment.png';
+import Like from 'assests/likee.png';
+import Scrap from '../../assests/commentt.png';
 
 const PostViewerBlock = styled(Responsive)`
   margin-top: 4rem;

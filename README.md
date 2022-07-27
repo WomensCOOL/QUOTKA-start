@@ -1,1 +1,1 @@
-# W's COOL Web Project - Quatka
+# W's COOL Web Project - Quotka

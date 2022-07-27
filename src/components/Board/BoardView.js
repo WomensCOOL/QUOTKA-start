@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import AddBoard from './Section/Board/AddBoard';
 import BoardTextarea from './Section/Board/BoardTextarea';
 import BoardInput from './Section/Board/BoardInput';
@@ -8,6 +8,8 @@ import { useDispatch } from 'react-redux';
 import { uploadBoard, listBoard } from 'modules/actions/board';
 import styled from 'styled-components';
 import Tag from 'components/Board/Section/Board/Tag';
+import SourceTag from 'components/Board/Section/Board/SourceTag';
+import TitleBoxContainer from 'components/write/BoardTitle';
 
 function BoardView({ history }) {
   const dispatch = useDispatch();
@@ -91,6 +93,9 @@ function BoardView({ history }) {
 
   return (
     <>
+      <Link to="/mypage/email">
+        <TitleBoxContainer></TitleBoxContainer>
+      </Link>
       <BoardBox>
         <BoardWriteForm onSubmit={onSubmit}>
           <ul>
@@ -111,12 +116,15 @@ function BoardView({ history }) {
               />
             </li>
             <li>
-              <Tag />
+              <SourceTag></SourceTag>
             </li>
             <li>
               <BoardButton type="submit" onClick={onSubmit}>
                 작성
               </BoardButton>
+              <CancelButton type="submit" onClick={onSubmit}>
+                취소
+              </CancelButton>
             </li>
             <li>
               <Alert>게시글 수정 및 삭제는 마이페이지에서 가능합니다.</Alert>
@@ -159,7 +167,7 @@ function BoardView({ history }) {
 export default withRouter(BoardView);
 
 const BoardBox = styled.div`
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   height: 100%;
 `;
@@ -180,16 +188,38 @@ const BoardWriteForm = styled.form`
 
 const BoardButton = styled.button`
   border-radius: 8px;
-  font-weight: 600;
-  width: 450px;
+  width: 100px;
   height: 30px;
-  padding-left: 30px;
-  letter-spacing: 20px;
   text-align: center;
-  background-color: #1a83ff;
-  color: #fff;
-  &:active {
-    opacity: 0.7;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-family: 'SCDream5M';
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: none;
+  background: #c5ad81;
+  color: white;
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+`;
+
+const CancelButton = styled.button`
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'SCDream5M';
+  cursor: pointer;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: none;
+  background: gray;
+  color: white;
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
   }
 `;
 
