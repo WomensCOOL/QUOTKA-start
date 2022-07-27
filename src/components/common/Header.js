@@ -53,11 +53,21 @@ const Header = props => {
             <div className="login-register">
               {user.userData && !user.userData.isAuth ? (
                 <nav className="userView">
-                  <Link to="/login" onClick={onClick} className="loginbar">
+                  <Link
+                    to="/login"
+                    onClick={onClick}
+                    className="loginbar"
+                    style={{ textDecoration: 'none', color: 'black' }}
+                  >
                     로그인
                   </Link>
 
-                  <Link to="/register" onClick={onClick} className="registbar">
+                  <Link
+                    to="/register"
+                    onClick={onClick}
+                    className="registbar"
+                    style={{ textDecoration: 'none', color: 'black' }}
+                  >
                     회원가입
                   </Link>
                 </nav>
@@ -67,7 +77,11 @@ const Header = props => {
                     <button onClick={onClickLogout} className="logoutbar">
                       로그아웃
                     </button>
-                    <Link to="/mypage" className="profileBox">
+                    <Link
+                      to="/mypage"
+                      className="profileBox"
+                      style={{ textDecoration: 'none', color: 'black' }}
+                    >
                       <img src={Profile} className="profile" />
                       <input
                         type="text"
@@ -82,7 +96,11 @@ const Header = props => {
             </div>
             <div className="logo-menu">
               <p className="QuotkaNav">
-                <Link to="/" className="Quotka">
+                <Link
+                  to="/"
+                  className="Quotka"
+                  style={{ textDecoration: 'none', color: 'black' }}
+                >
                   QUOTKA
                 </Link>
                 {HeadbarData.map((item, index) => {
