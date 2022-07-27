@@ -6,7 +6,6 @@ import { updateBoard } from 'modules/actions/board';
 import AddBoard from 'components/BoardQuoteMaster/Section/Board/AddBoard';
 import styled from 'styled-components';
 
-
 function MyBoardList({ history }) {
   const dispatch = useDispatch();
   const userFrom = localStorage.getItem('userId');
