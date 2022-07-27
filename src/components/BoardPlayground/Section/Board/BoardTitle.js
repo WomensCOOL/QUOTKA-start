@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//수정사항
 const BoardTitleBlock = styled.div`
   width: 1000px;
   padding-top: 0rem;
