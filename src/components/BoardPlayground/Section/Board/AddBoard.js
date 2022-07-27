@@ -203,15 +203,18 @@ const TimeBox = styled.div`
   font-size: 14px;
   padding-top: 3px;
   color: #aaa;
-  font-weight: 600;
+  font-family: 'SCDream';
+  font-weight: 900;
 `;
 
 const ViewCounts = styled.div`
   width: 100px;
   margin-left: 10px;
   padding-top: 3px;
+  font-family: 'SCDream';
   font-size: 14px;
   color: #aaa;
+  font-weight: 900;
 `;
 
 const NameBox = styled.div`
@@ -235,6 +238,7 @@ const Content = styled.div`
   padding-top: 30px;
   padding-bottom: 35px;
   line-height: 25px;
+  font-weight: 900;
 `;
 
 const ButtonBox = styled.div`
