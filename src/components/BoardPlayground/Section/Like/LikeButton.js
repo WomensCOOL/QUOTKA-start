@@ -8,6 +8,7 @@ import {
 } from 'modules/actions/like';
 import styled from 'styled-components';
 import LikeIcon from 'assests/likee.png';
+import 'styles/board/button.css';
 
 function LikeButton({ boardId, boardTitle, boardContent, boardWriter }) {
   const dispatch = useDispatch();
@@ -84,7 +85,9 @@ function LikeButton({ boardId, boardTitle, boardContent, boardWriter }) {
     <>
       <button onClick={handleLike}>
         <Like src={LikeIcon} />
-        <p>{likeCounts}</p>
+        <Counts>
+          <span>{likeCounts}</span>
+        </Counts>
       </button>
     </>
   );
@@ -93,6 +96,15 @@ function LikeButton({ boardId, boardTitle, boardContent, boardWriter }) {
 export default LikeButton;
 
 const Like = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-right: -23px;
+`;
+
+const Counts = styled.span`
+  font-size: 15px;
+  color: gray;
+  text-align: left;
+  margin-top: 4px;
+  margin-right: 10px;
 `;

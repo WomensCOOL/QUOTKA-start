@@ -24,7 +24,10 @@ const BoardWriteButton = styled(Button)`
 
 const WriteButton = () => {
   return (
-    <Link style={{ textDecoration: 'none', color: 'black' }} to="/board">
+    <Link
+      style={{ textDecoration: 'none', color: 'black' }}
+      to="/playground/board"
+    >
       <BoardWriteButton>Write a Post</BoardWriteButton>
     </Link>
   );

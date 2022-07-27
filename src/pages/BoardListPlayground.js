@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router';
-import BoardView from 'components/Board/BoardView';
-import BoardDetail from 'components/Board/BoardDetail';
-import BoardList from 'components/Board/BoardList';
+import BoardView from 'components/BoardPlayground/BoardView';
+import BoardDetail from 'components/BoardPlayground/BoardDetail';
+import BoardList from 'components/BoardPlayground/BoardList';
 
 function Board({ match }) {
   return (

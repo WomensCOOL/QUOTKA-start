@@ -230,16 +230,17 @@ const InfoBox = styled.li`
 
 const Content = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 13px;
+  font-size: 15px;
   padding-left: 2px;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 35px;
+  line-height: 25px;
 `;
 
 const ButtonBox = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  padding-bottom: 35px;
+  margin-bottom: 40px;
 `;
 
 const DeleteBoardBox = styled.div``;

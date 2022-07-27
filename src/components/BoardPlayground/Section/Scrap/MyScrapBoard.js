@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import UpdateTime from 'library/utils/updateTime';
-import DeleteBoard from 'components/Board/Section/Board/DeleteBoard';
-import LikeButton from '../Like/LikeButton';
+import DeleteBoard from 'components/BoardPlayground/Section/Board/DeleteBoard';
+import ScrapButton from './ScrapButton';
 import CommentButton from '../Comment/CommentButton';
 import Github from 'assests/Github.png';
 import styled from 'styled-components';
 
-function MyLikeBoard(props) {
+function MyScrapBoard(props) {
   const currentUser = window.localStorage.getItem('userId');
 
   return (
@@ -45,7 +45,7 @@ function MyLikeBoard(props) {
           <Content>{props.content}</Content>
         </Link>
         <div style={{ textAlign: 'right' }}>
-          <LikeButton
+          <ScrapButton
             boardId={props.id}
             boardWriter={props.writer}
             boardTitle={props.title}
@@ -60,7 +60,7 @@ function MyLikeBoard(props) {
   );
 }
 
-export default withRouter(MyLikeBoard);
+export default withRouter(MyScrapBoard);
 
 const GithubImg = styled.img`
   width: 28px;

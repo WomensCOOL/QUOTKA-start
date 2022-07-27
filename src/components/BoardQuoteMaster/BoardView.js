@@ -7,10 +7,10 @@ import Pagination from '@material-ui/lab/Pagination';
 import { useDispatch } from 'react-redux';
 import { uploadBoard, listBoard } from 'modules/actions/board';
 import styled from 'styled-components';
-import Tag from 'components/Board/Section/Board/Tag';
-import SourceTag from 'components/Board/Section/Board/SourceTag';
-import TitleBoxContainer from 'components/Board/Section/Board/BoardTitle';
-import BoardList from 'pages/BoardList';
+import Tag from 'components/BoardQuoteMaster/Section/Board/Tag';
+import SourceTag from 'components/BoardQuoteMaster/Section/Board/SourceTag';
+import TitleBoxContainer from 'components/BoardQuoteMaster/Section/Board/BoardTitle';
+import BoardList from 'pages/BoardListQuoteMaster';
 
 function BoardView({ history }) {
   const dispatch = useDispatch();

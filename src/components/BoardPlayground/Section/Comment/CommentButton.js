@@ -29,7 +29,9 @@ function CommentButton({ boardId }) {
   return (
     <button>
       <Comment src={CommentIcon} />
-      <Count>{CommentCounts}</Count>
+      <Count>
+        <span>{CommentCounts}</span>
+      </Count>
     </button>
   );
 }
@@ -37,8 +39,14 @@ function CommentButton({ boardId }) {
 export default withRouter(CommentButton);
 
 const Comment = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-right: -23px;
 `;
 
-const Count = styled.p``;
+const Count = styled.span`
+  font-size: 15px;
+  color: gray;
+  text-align: left;
+  margin-top: 4px;
+`;

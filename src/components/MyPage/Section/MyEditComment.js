@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getMyComment } from 'modules/actions/user';
 import { updateComment } from 'modules/actions/comment';
-import AddComment from 'components/Board/Section/Comment/AddComment';
+import AddComment from 'components/BoardQuoteMaster/Section/Comment/AddComment';
 import styled from 'styled-components';
 
 function MyEditComment({ history }) {

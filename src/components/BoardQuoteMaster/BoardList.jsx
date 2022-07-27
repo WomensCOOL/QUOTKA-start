@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Table from 'react-bootstrap/Table';
-import TitleBoxContainer from 'components/Board/Section/Board/BoardTitle';
+import TitleBoxContainer from 'components/BoardQuoteMaster/Section/Board/BoardTitle';
 import { Link } from 'react-router-dom';
 import BoardListTextBox from './Section/List/BoardListText';
 import styled from 'styled-components';
@@ -48,7 +48,7 @@ class BoardList extends Component {
               <td>
                 <Link
                   style={{ textDecoration: 'none', color: 'black' }}
-                  to="/board/quotkaId"
+                  to="/quotemaster/board/quotkaId"
                 >
                   New Title Test
                 </Link>
