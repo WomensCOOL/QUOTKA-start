@@ -170,7 +170,7 @@ function BoardView({ history }) {
 export default withRouter(BoardView);
 
 const BoardBox = styled.div`
-  width: 100%;
+  width: 750px;
   margin: 0 auto;
   margin-left: 0px;
   height: 100%;
