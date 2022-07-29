@@ -13,7 +13,8 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import StyledCheckBox from 'styles/container/styles';
 import googleLogin from 'components/Login/googleLogin';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-
+//로그인 버튼의 alert 넣을 때.
+//<div id="loginAlert" onClick={() => alert('로그인이 되었습니다.')}></div>
 const clientId =
   '963235660579-40t446lr6tf6hk722t1eorab1l87chru.apps.googleusercontent.com';
 
