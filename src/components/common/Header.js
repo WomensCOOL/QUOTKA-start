@@ -51,48 +51,26 @@ const Header = props => {
         <div className="HeaderBox">
           <div className="navbar">
             <div className="login-register">
-              {user.userData && !user.userData.isAuth ? (
+              <>
                 <nav className="userView">
+                  <button onClick={onClickLogout} className="logoutbar">
+                    로그아웃
+                  </button>
                   <Link
-                    to="/login"
-                    onClick={onClick}
-                    className="loginbar"
+                    to="/mypage"
+                    className="profileBox"
                     style={{ textDecoration: 'none', color: 'black' }}
                   >
-                    로그인
-                  </Link>
-
-                  <Link
-                    to="/register"
-                    onClick={onClick}
-                    className="registbar"
-                    style={{ textDecoration: 'none', color: 'black' }}
-                  >
-                    회원가입
+                    <img src={Profile} className="profile" />
+                    <input
+                      type="text"
+                      className="userName"
+                      value={userName + '쿼억카' + '님!'}
+                      readOnly
+                    />
                   </Link>
                 </nav>
-              ) : (
-                <>
-                  <nav className="userView">
-                    <button onClick={onClickLogout} className="logoutbar">
-                      로그아웃
-                    </button>
-                    <Link
-                      to="/mypage"
-                      className="profileBox"
-                      style={{ textDecoration: 'none', color: 'black' }}
-                    >
-                      <img src={Profile} className="profile" />
-                      <input
-                        type="text"
-                        className="userName"
-                        value={userName + ' ' + '님!'}
-                        readOnly
-                      />
-                    </Link>
-                  </nav>
-                </>
-              )}
+              </>
             </div>
             <div className="logo-menu">
               <p className="QuotkaNav">

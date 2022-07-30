@@ -52,19 +52,7 @@ function MyComment() {
           </thead>
           <tbody>
             <tr>
-              <td className="num">1</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">2</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">3</td>
+              <td className="num">5</td>
               <td className="date">2022.07.24</td>
               <td className="title">뭐라뭐라 제목이올시다</td>
               <td className="content">뭐라뭐라 내용이 올시다.</td>
@@ -76,7 +64,19 @@ function MyComment() {
               <td className="content">뭐라뭐라 내용이 올시다.</td>
             </tr>
             <tr>
-              <td className="num">5</td>
+              <td className="num">3</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">2</td>
+              <td className="date">2022.07.24</td>
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">1</td>
               <td className="date">2022.07.24</td>
               <td className="title">뭐라뭐라 제목이올시다</td>
               <td className="content">뭐라뭐라 내용이 올시다.</td>
@@ -84,28 +84,6 @@ function MyComment() {
           </tbody>
         </table>
       </BoardUI>
-      <Paging />
-      {CommentsFrom.length === 0 && (
-        <NothingBox>
-          <NothingAlert>댓글 목록이 없습니다.</NothingAlert>
-        </NothingBox>
-      )}
-      {CommentsFrom &&
-        CommentsFrom.map((board, index) => {
-          return (
-            <React.Fragment key={index}>
-              <AddBoard
-                id={board._id}
-                user={board.userFrom}
-                time={board.createdAt}
-                writer={board.boardWriter}
-                title={board.boardTitle}
-                content={board.boardContent}
-                onRemove={onRemove}
-              />
-            </React.Fragment>
-          );
-        })}
     </>
   );
 }

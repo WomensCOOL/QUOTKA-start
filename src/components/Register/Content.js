@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { registerUser, checkUser } from 'modules/actions/user';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import Logo from 'assests/Logo.png';
 import {
   PasswordError,
@@ -24,6 +25,17 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+
+const successAlert = () => {
+  Swal.fire({
+    title: '확인',
+    text: '회원가입이 완료되었습니다.',
+    icon: 'info',
+  }).then(function () {
+    location.href = '/login';
+    // 이벤트
+  });
+};
 
 function RegisterPage(props) {
   const {
@@ -169,7 +181,7 @@ function RegisterPage(props) {
             </ErrorMessage>
           )}
         </InputBox>
-        <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+        <RegistButton type="submit" onClick={successAlert}>
           회원가입
         </RegistButton>
         <TextBox>

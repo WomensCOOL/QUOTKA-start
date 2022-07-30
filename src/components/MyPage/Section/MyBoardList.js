@@ -85,34 +85,20 @@ function MyBoardList({ history }) {
           </thead>
           <tbody>
             <tr>
-              <td className="num">1</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
               <td className="num">2</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
+              <td className="date">2022.07.29</td>
+              <td className="title">내가 사랑한 것들</td>
+              <td className="content">
+                아빠는 말씀하셨다. 너무 작은 것들까지 사랑하지 말라고. ...
+              </td>
             </tr>
             <tr>
-              <td className="num">3</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">4</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">5</td>
-              <td className="date">2022.07.24</td>
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
+              <td className="num">1</td>
+              <td className="date">2022.07.25</td>
+              <td className="title">당신은 소심한 타자...</td>
+              <td className="content">
+                아웃당할까 두려워 배트를 휘두르지조차 못하죠, 계속 망설 ...
+              </td>
             </tr>
           </tbody>
         </table>

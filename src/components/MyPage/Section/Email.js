@@ -9,7 +9,33 @@ import { PasswordError, PasswordConfirmError } from 'library/options/errors';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import IconButton from '@material-ui/core/IconButton';
+import Swal from 'sweetalert2';
+
 import Profile from './Profile';
+const successAlert = () => {
+  Swal.fire({
+    text: '이메일이 변경되었습니다.',
+    icon: 'info',
+    showConfirmButton: false,
+    timer: 8000,
+  });
+};
+const succesAlert = () => {
+  Swal.fire({
+    text: '비밀번호가 변경되었습니다.',
+    icon: 'info',
+    showConfirmButton: false,
+    timer: 8000,
+  });
+};
+const succeAlert = () => {
+  Swal.fire({
+    text: '비밀번호가 변경되었습니다.',
+    icon: 'warning',
+    showConfirmButton: false,
+    timer: 8000,
+  });
+};
 import {
   FormBox,
   ProfileBox,
@@ -118,7 +144,7 @@ function Email({ history }) {
           <FilledInput
             id="oldEmail"
             name="oldEmail"
-            value={oldEmail}
+            value="sonrisa-bonita@naver.com"
             readOnly
           />
         </InputBox>
@@ -182,7 +208,7 @@ function Email({ history }) {
         </InputBox>
         <InputBox>
           <li>
-            <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+            <RegistButton type="submit" onClick={successAlert}>
               이메일 변경
             </RegistButton>
           </li>
@@ -296,7 +322,7 @@ function Email({ history }) {
         </InputBox>
         <InputBox>
           <li>
-            <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+            <RegistButton type="submit" onClick={succesAlert}>
               비밀번호 변경
             </RegistButton>
           </li>
@@ -363,7 +389,7 @@ function Email({ history }) {
         </InputBox>
         <InputBox>
           <li>
-            <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+            <RegistButton type="submit" onClick={succeAlert}>
               회원탈퇴
             </RegistButton>
           </li>

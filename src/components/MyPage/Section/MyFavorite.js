@@ -37,23 +37,7 @@ function myFavorite() {
           </thead>
           <tbody>
             <tr>
-              <td className="num">1</td>
-              <td className="date">2022.07.24</td>
-              <td className="user">글쓴이</td>
-
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">2</td>
-              <td className="date">2022.07.24</td>
-              <td className="user">글쓴이</td>
-
-              <td className="title">뭐라뭐라 제목이올시다</td>
-              <td className="content">뭐라뭐라 내용이 올시다.</td>
-            </tr>
-            <tr>
-              <td className="num">3</td>
+              <td className="num">5</td>
               <td className="date">2022.07.24</td>
               <td className="user">글쓴이</td>
 
@@ -69,7 +53,23 @@ function myFavorite() {
               <td className="content">뭐라뭐라 내용이 올시다.</td>
             </tr>
             <tr>
-              <td className="num">5</td>
+              <td className="num">3</td>
+              <td className="date">2022.07.24</td>
+              <td className="user">글쓴이</td>
+
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">2</td>
+              <td className="date">2022.07.24</td>
+              <td className="user">글쓴이</td>
+
+              <td className="title">뭐라뭐라 제목이올시다</td>
+              <td className="content">뭐라뭐라 내용이 올시다.</td>
+            </tr>
+            <tr>
+              <td className="num">1</td>
               <td className="date">2022.07.24</td>
               <td className="user">글쓴이올시다</td>
               <td className="title">뭐라뭐라 제목이올시다</td>
@@ -78,26 +78,6 @@ function myFavorite() {
           </tbody>
         </table>
       </BoardUI>
-      {myFavorites.length === 0 && (
-        <NothingBox>
-          <NothingAlert>좋아요한 게시글이 없습니다.</NothingAlert>
-        </NothingBox>
-      )}
-      {myFavorites &&
-        myFavorites.map((likes, index) => {
-          return (
-            <React.Fragment key={index}>
-              <MyLikeBoard
-                href="{`../board/${likes.boardFrom}`}"
-                id={likes.boardFrom}
-                time={likes.createdAt}
-                writer={likes.boardWriter}
-                title={likes.boardTitle}
-                content={likes.boardContent}
-              />
-            </React.Fragment>
-          );
-        })}
     </>
   );
 }

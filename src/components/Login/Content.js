@@ -5,6 +5,7 @@ import { loginUser } from 'modules/actions/user';
 import { EmailError, PasswordError } from 'library/options/errors';
 import { useForm } from 'react-hook-form';
 import Logo from 'assests/Logo.png';
+import Swal from 'sweetalert2';
 import Google from 'assests/Google.png';
 import 'styles/container/styles';
 import IconButton from '@material-ui/core/IconButton';
@@ -13,8 +14,17 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import StyledCheckBox from 'styles/container/styles';
 import googleLogin from 'components/Login/googleLogin';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
-//로그인 버튼의 alert 넣을 때.
-//<div id="loginAlert" onClick={() => alert('로그인이 되었습니다.')}></div>
+
+const successAlert = () => {
+  Swal.fire({
+    title: '확인',
+    text: '로그인이 완료되었습니다.',
+    icon: 'info',
+  }).then(function () {
+    location.href = 'http://localhost:3000/';
+    // 이벤트
+  });
+};
 const clientId =
   '963235660579-40t446lr6tf6hk722t1eorab1l87chru.apps.googleusercontent.com';
 
@@ -160,7 +170,7 @@ function LoginPage() {
           <ErrorMessage>{PasswordError[errors.password.type]}</ErrorMessage>
         )}
       </InputBox>
-      <LoginButton type="submit" onClick={handleSubmit(onSubmit)}>
+      <LoginButton type="submit" onClick={successAlert}>
         로그인
       </LoginButton>
       <StyledCheckBox

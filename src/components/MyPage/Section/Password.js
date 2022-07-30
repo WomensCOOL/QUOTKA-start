@@ -5,6 +5,24 @@ import { useDispatch } from 'react-redux';
 import { getName, updateName } from 'modules/actions/user';
 import Profile from './Profile';
 import Uploader from './Uploader';
+import Swal from 'sweetalert2';
+const successAlert = () => {
+  Swal.fire({
+    text: '프로필이 변경되었습니다.',
+    icon: 'info',
+    showConfirmButton: false,
+    timer: 8000,
+  });
+};
+const succesAlert = () => {
+  Swal.fire({
+    text: '닉네임이 변경되었습니다.',
+    icon: 'info',
+    showConfirmButton: false,
+    timer: 8000,
+  });
+};
+
 import {
   FormBox,
   ProfileBox,
@@ -68,7 +86,7 @@ function Email({ history }) {
 
         <InputBox>
           <li>
-            <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+            <RegistButton type="submit" onClick={successAlert}>
               프로필 변경
             </RegistButton>
           </li>
@@ -76,7 +94,7 @@ function Email({ history }) {
         <Title>닉네임 변경</Title>
         <InputBox>
           <label htmlFor="oldName">현재 닉네임</label>
-          <FilledInput id="oldName" name="oldName" value={oldName} readOnly />
+          <FilledInput id="oldName" name="oldName" value="쿼억카" readOnly />
         </InputBox>
         <InputBox>
           <label htmlFor="name">변경할 닉네임</label>
@@ -93,7 +111,7 @@ function Email({ history }) {
         </InputBox>
         <InputBox>
           <li>
-            <RegistButton type="submit" onClick={handleSubmit(onSubmit)}>
+            <RegistButton type="submit" onClick={succesAlert}>
               닉네임 변경
             </RegistButton>
           </li>

@@ -18,7 +18,7 @@ function PageList() {
         <MyPageTitle>MY PAGE</MyPageTitle>
         <img src={Profile} className="profile" />
 
-        <div className="id">쿼억하</div>
+        <div className="id">쿼억카</div>
         <MyChange>
           <ul>
             <li>
@@ -32,7 +32,7 @@ function PageList() {
         <MyPagefollow>
           <div>Follower</div>0<div>Following</div>0
         </MyPagefollow>
-        <MyInform>안녕하세요 쿼억하 입니다. 행복하세요 ^^</MyInform>
+        <MyInform>안녕하세요 쿼억카 입니다. 행복하세요 ^^</MyInform>
         <Tab />
       </MyPageBox>
     </>
